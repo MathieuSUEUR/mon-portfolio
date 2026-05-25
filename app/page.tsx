@@ -442,6 +442,96 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Compétences personnelles - Stack technique */}
+            <div className="mt-16">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-600 mb-4">Mon Stack Technique</h2>
+                <p className="text-lg text-zinc-600 max-w-2xl mx-auto">Les technologies que je maîtrise, forgées au fil de projets et d'expériences.</p>
+              </div>
+
+              {/* Terminal-style container */}
+              <div className="bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl border border-zinc-700">
+                {/* Barre de fenêtre terminal */}
+                <div className="flex items-center gap-2 px-6 py-4 bg-zinc-800 border-b border-zinc-700">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-amber-400"></div>
+                  <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
+                  <span className="ml-4 text-zinc-400 text-sm font-mono">~/mathieu/skills — bash</span>
+                </div>
+
+                {/* Contenu */}
+                <div className="p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                  {/* Langages */}
+                  <div>
+                    <div className="flex items-center gap-2 mb-5">
+                      <span className="text-emerald-400 font-mono text-sm select-none">$</span>
+                      <span className="text-zinc-300 font-mono text-sm">ls <span className="text-sky-400">languages/</span></span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {["SQL", "NoSQL", "C", "C#", "Java", "PHP", "HTML", "CSS"].map((lang) => (
+                        <span key={lang} className="px-3 py-1.5 bg-sky-500/15 border border-sky-500/40 text-sky-300 rounded-lg text-sm font-mono font-medium hover:bg-sky-500/25 hover:border-sky-400 transition-colors cursor-default">
+                          {lang}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Frameworks */}
+                  <div>
+                    <div className="flex items-center gap-2 mb-5">
+                      <span className="text-emerald-400 font-mono text-sm select-none">$</span>
+                      <span className="text-zinc-300 font-mono text-sm">ls <span className="text-violet-400">frameworks/</span></span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {["Symfony", "Next.js"].map((fw) => (
+                        <span key={fw} className="px-3 py-1.5 bg-violet-500/15 border border-violet-500/40 text-violet-300 rounded-lg text-sm font-mono font-medium hover:bg-violet-500/25 hover:border-violet-400 transition-colors cursor-default">
+                          {fw}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Bases de données */}
+                  <div>
+                    <div className="flex items-center gap-2 mb-5">
+                      <span className="text-emerald-400 font-mono text-sm select-none">$</span>
+                      <span className="text-zinc-300 font-mono text-sm">ls <span className="text-amber-400">databases/</span></span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {["MySQL", "Oracle"].map((db) => (
+                        <span key={db} className="px-3 py-1.5 bg-amber-500/15 border border-amber-500/40 text-amber-300 rounded-lg text-sm font-mono font-medium hover:bg-amber-500/25 hover:border-amber-400 transition-colors cursor-default">
+                          {db}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Outils */}
+                  <div>
+                    <div className="flex items-center gap-2 mb-5">
+                      <span className="text-emerald-400 font-mono text-sm select-none">$</span>
+                      <span className="text-zinc-300 font-mono text-sm">ls <span className="text-rose-400">tools/</span></span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {["Linux", "Git", "VS Code", "JetBrains"].map((tool) => (
+                        <span key={tool} className="px-3 py-1.5 bg-rose-500/15 border border-rose-500/40 text-rose-300 rounded-lg text-sm font-mono font-medium hover:bg-rose-500/25 hover:border-rose-400 transition-colors cursor-default">
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* Ligne de prompt finale */}
+                <div className="px-8 md:px-12 pb-8 flex items-center gap-2">
+                  <span className="text-emerald-400 font-mono text-sm select-none">$</span>
+                  <span className="w-2 h-4 bg-emerald-400 rounded-sm animate-pulse inline-block"></span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
