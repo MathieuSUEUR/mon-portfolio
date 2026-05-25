@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
 function Header() {
   const [cvOpen, setCvOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -91,7 +89,7 @@ function Header() {
             >
               {/* Bouton Voir */}
               <a
-                href={`${BASE_PATH}/cv.pdf`}
+                href={"/cv.pdf"}
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Voir le CV"
@@ -108,7 +106,7 @@ function Header() {
 
               {/* Bouton Télécharger */}
               <a
-                href={`${BASE_PATH}/cv.pdf`}
+                href={"/cv.pdf"}
                 download
                 title="Télécharger le CV"
                 className="group flex flex-col items-center gap-1"
@@ -161,7 +159,7 @@ export default function Home() {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full blur opacity-50 group-hover:opacity-100 transition duration-500"></div>
               <div className="relative h-40 w-40 sm:h-48 sm:w-48 rounded-full border-4 border-zinc-900 bg-zinc-800 flex items-center justify-center shadow-xl overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]">
                 <Image
-                  src={`${BASE_PATH}/images/photopourcv.jpg`}
+                  src="/images/photopourcv.jpg"
                   alt="Portrait de Mathieu SUEUR"
                   fill
                   className="object-cover"
@@ -345,7 +343,7 @@ export default function Home() {
                 {/* Image en haut */}
                 <div className="w-full h-56 relative overflow-hidden group">
                   <Image
-                    src={`${BASE_PATH}/images/i.png`}
+                    src="/images/i.png"
                     alt="Aperçu du site ice-dev.com réalisé lors du stage"
                     fill
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
@@ -468,7 +466,7 @@ export default function Home() {
                 {/* Aperçu du projet */}
                 <div className="w-full h-48 bg-zinc-200 overflow-hidden relative">
                   <Image
-                    src={`${BASE_PATH}/images/previewPortfolio.png`}
+                    src="/images/previewPortfolio.png"
                     alt="Aperçu du portfolio"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
